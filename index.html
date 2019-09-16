@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <style scoped>
+      #sense-widget-sidenav a {
+        position: absolute !important;
+        right: -217px !important;
+        transition: 0.3s !important;
+        padding: 15px !important;
+        width: 232px !important;
+        text-decoration: none !important;
+        font-size: 20px !important;
+        color: white !important;
+        border-radius: 5px 0 0 5px !important;
+      }
+
+      .sense-widget-flex-container {
+        display: flex !important;
+        flex-direction: row !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #sense-widget-sidenav a:hover {
+        right: 0 !important;
+      }
+
+      #sense-widget-placeholder {
+        padding-right: 50px !important;
+        margin: auto auto !important;
+      }
+
+      #sense-widget-content-body {
+        height: 112px !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #sense-widget-drawer {
+        text-align: center !important;
+        top: 80px !important;
+        background-color: #464CE4 !important;
+      }
+
+      #sense-widget-sidenav {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      #sense-widget-title {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .sense-widget-rate {
+        float: left !important;
+        height: 46px !important;
+        padding: 0 10px !important;
+      }
+
+      .sense-widget-rate:not(:checked)>input {
+        position: absolute !important;
+        top: -9999px !important;
+      }
+
+      .sense-widget-rate:not(:checked)>label {
+        float: right !important;
+        width: 1em !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+        cursor: pointer !important;
+        font-size: 30px !important;
+        color: #ccc !important;
+      }
+
+      .sense-widget-rate:not(:checked)>label:before {
+        content: '★ ' !important;
+      }
+
+      .sense-widget-rate>input:checked~label {
+        color: #ffc700 !important;
+      }
+
+      .sense-widget-rate:not(:checked)>label:hover,
+      .sense-widget-rate:not(:checked)>label:hover~label {
+        color: #deb217 !important;
+      }
+
+      .sense-widget-rate>input:checked+label:hover,
+      .sense-widget-rate>input:checked+label:hover~label,
+      .sense-widget-rate>input:checked~label:hover,
+      .sense-widget-rate>input:checked~label:hover~label,
+      .sense-widget-rate>label:hover~input:checked~label {
+        color: #c59b08 !important;
+      }
+
+      .sense-widget-button {
+        background-color: #4CAF50 !important;
+        /* Green */
+        border: none !important;
+        color: white !important;
+        border-radius: 5px !important;
+        padding: 6px 15px !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        font-size: 12px !important;
+        margin: 4px 2px !important;
+        -webkit-transition-duration: 0.4s !important;
+        /* Safari */
+        transition-duration: 0.4s !important;
+        cursor: pointer !important;
+      }
+
+      .sense-widget-button2 {
+        margin: 0 !important;
+        background-color: white !important;
+        color: #464ce4 !important;
+        border: 2px solid #ffffff !important;
+      }
+
+      .sense-widget-button2:hover {
+        margin: 0 !important;
+        background-color: #464ce4 !important;
+        color: white !important;
+      }
+
+      .sense-widget-footer {
+        font-size: 10px !important;
+        color: #ccc !important;
+        padding-top: 5px !important;
+      }
+    </style>
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      <div id="sense-widget-sidenav">
+          Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
+      <a href="#" id="sense-widget-drawer">
+        <div class="sense-widget-flex-container">
+          <div id="sense-widget-placeholder">
+            < </div> <div id="sense-widget-content-body">
+              <h3 id="sense-widget-title">How would you rate us ?</h3>
+              <div class="sense-widget-rate">
+                <input type="radio" id="sense-widget-star5" name="rate" value="5" />
+                <label for="sense-widget-star5" title="text">5 stars</label>
+                <input type="radio" id="sense-widget-star4" name="rate" value="4" />
+                <label for="sense-widget-star4" title="text">4 stars</label>
+                <input type="radio" id="sense-widget-star3" name="rate" value="3" />
+                <label for="sense-widget-star3" title="text">3 stars</label>
+                <input type="radio" id="sense-widget-star2" name="rate" value="2" />
+                <label for="sense-widget-star2" title="text">2 stars</label>
+                <input type="radio" id="sense-widget-star1" name="rate" value="1" />
+                <label for="sense-widget-star1" title="text">1 star</label>
+              </div>
+              <button class="sense-widget-button sense-widget-button2" onclick="">Send</button>
+              <p class="sense-widget-footer">Powered by SenseWidget</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+</body>
+<script>
+  window.localStorage.setItem('sessionKey', 'Testing key');
+  var _flagForScroller = false
+  document.onscroll = function () {
+    var pos = showPosition(document.body);
+    console.log(Math.round(pos) + '%')
+    if (pos > 40 && _flagForScroller == false) {
+      alert("scroll working")
+      _flagForScroller = true
+    }
+  };
+  function flagToggler() {
+    _flagForScroller = true
+  };
+  function showPosition(elm) {
+    var parent = elm.parentNode,
+      pos = (elm.scrollTop || parent.scrollTop) / (parent.scrollHeight - parent.clientHeight) * 100;
+    return pos;
+  };
+</script>
+
+</html>
