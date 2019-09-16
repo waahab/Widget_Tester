@@ -220,7 +220,7 @@
                 <input type="radio" id="sense-widget-star1" name="rate" value="1" />
                 <label for="sense-widget-star1" title="text">1 star</label>
               </div>
-              <button class="sense-widget-button sense-widget-button2" onclick="">Send</button>
+              <button class="sense-widget-button sense-widget-button2" onclick="flagToggler()">Send</button>
               <p class="sense-widget-footer">Powered by SenseWidget</p>
           </div>
         </div>
@@ -237,7 +237,7 @@
     console.log(Math.round(pos) + '%')
     if (pos > 40 && _flagForScroller == false) {
       alert("scroll working")
-      _flagForScroller = true
+      // _flagForScroller = true
     }
   };
   function flagToggler() {
