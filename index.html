@@ -8,229 +8,324 @@
   <title>Document</title>
 </head>
 
+<style scoped>
+  #sense-widget-container {
+    position: absolute !important;
+    height: 193px !important;
+    width: 337px !important;
+    -webkit-animation: mymoveright 1s !important;
+    animation: mymoveright 1s !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    word-wrap: break-word !important;
+    -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
+    -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
+    box-shadow: 3px 3px 4px 4px #ccc !important;
+    background: #fff !important;
+    color: #000 !important;
+    right: 0 !important;
+    top: 15vh !important;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes mymoveright {
+    from {
+      right: -200px;
+    }
+
+    to {
+      right: 0px;
+    }
+  }
+
+  @keyframes mymoveright {
+    from {
+      right: -200px;
+    }
+
+    to {
+      right: 0px;
+    }
+  }
+
+  #sense-widget-close {
+    font-family: Geneva, Tahoma, sans-serif !important;
+    font-size: 15px !important;
+    color: #353535 !important;
+    text-align: right !important;
+    padding: 15px 15px 0px 0px !important;
+    margin: 0px !important;
+  }
+
+  #sense-widget-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-size: 22px !important;
+    margin: 0px !important;
+    padding: 5px !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  #sense-widget-thanks-message {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-size: 22px !important;
+    margin: 0 !important;
+    padding: 5px !important;
+    display: none !important;
+  }
+
+  .sense-widget-listItem {
+    word-wrap: break-word !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  /* DropDown *******************/
+  #sense-widget-dropbtn {
+    background-color: #ffffff !important;
+    color: #939393 !important;
+    padding: 0 !important;
+    border: 1px solid #C3CDE4 !important;
+    border-radius: 5px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    height: 32px !important;
+    margin: 0px !important;
+    max-height: 32px !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    display: none;
+  }
+
+  #sense-widget-footer-logo-border {
+    width: 272px !important;
+    position: relative !important;
+    top: 4px !important;
+    border-top: #C3CDE4 solid 0.6px !important;
+    display: block !important;
+    margin: 0 auto;
+  }
+
+  #sense-widget-footer-logo-box {
+    color: #AAAFC0 !important;
+    text-align: right !important;
+    padding-top: 12px !important;
+  }
+
+  #sense-widget-footer-logo {
+    vertical-align: middle !important;
+    height: 24px !important;
+    width: 60px !important;
+    margin-left: 10px !important;
+  }
+
+  #sense-widget-footer-text {
+    vertical-align: middle !important;
+  }
+
+  /* text Area */
+  #sense-widget-text-area {
+    background-color: #ffffff !important;
+    color: #939393 !important;
+    padding: 6px !important;
+    border: 1px solid #C3CDE4 !important;
+    border-radius: 5px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    height: 80px !important;
+    margin: 0px auto !important;
+    max-height: 80px !important;
+    font-size: 12px !important;
+    display: none;
+  }
+
+  .sense-widget-submit-button {
+    font-size: 10px !important;
+    /* Green */
+    float: right !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+    margin: 4px 2px !important;
+    -webkit-transition-duration: 0.4s !important;
+    /* Safari */
+    transition-duration: 0.4s !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    display: none !important;
+
+  }
+
+  .sense-widget-submit-button2 {
+    font-size: 10px !important;
+    background-color: #464ce4 !important;
+    color: #fff !important;
+    padding: 6px 15px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+    display: none !important;
+
+  }
+
+  .sense-widget-submit-button2:hover {
+    width: 100px !important;
+    max-width: 100px !important;
+    border: 2px solid #464ce4 !important;
+    font-size: 10px !important;
+    background-color: #fff !important;
+    color: #464ce4 !important;
+    display: none !important;
+  }
+
+  #sense-widget-submit-btn {
+    display: none !important;
+    /* margin: 5px 0px 0px 0px !important; */
+  }
+
+  #sense-widget-submitted-state-wrapper {
+    width: 230px !important;
+    max-width: 230px !important;
+    display: none !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    font-size: 22px !important;
+    margin: 0px auto !important;
+    padding: 10px 0px 0px 0px !important;
+  }
+
+  /* Star Rating  */
+  .sense-widget-rating-star {
+    width: 280px !important;
+    height: 60px !important;
+    padding: 0 10px !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .sense-widget-rating-star:not(:checked)>input {
+    position: absolute !important;
+    top: -9999px !important;
+  }
+
+  .sense-widget-rating-star:not(:checked)>label {
+    float: right !important;
+    width: 1em !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    font-size: 52px !important;
+    color: #ccc !important;
+  }
+
+  .sense-widget-rating-star:not(:checked)>label:before {
+    content: '★ ' !important;
+  }
+
+  .sense-widget-rating-star>input:checked~label {
+    color: #ffc700 !important;
+  }
+
+  .sense-widget-rating-star:not(:checked)>label:hover,
+  .sense-widget-rating-star:not(:checked)>label:hover~label {
+    color: #deb217 !important;
+  }
+
+  .sense-widget-rating-star>input:checked+label:hover,
+  .sense-widget-rating-star>input:checked+label:hover~label,
+  .sense-widget-rating-star>input:checked~label:hover,
+  .sense-widget-rating-star>input:checked~label:hover~label,
+  .sense-widget-rating-star>label:hover~input:checked~label {
+    color: #c59b08 !important;
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    width: 52px;
+    height: 52px;
+    border: none;
+    cursor: pointer;
+    transition: border .2s ease;
+    filter: invert(48%) sepia(81%) saturate(2476%) hue-rotate(-508deg) brightness(118%) contrast(30%);
+    margin: 0 5px;
+    transition: all .2s ease;
+  }
+</style>
+
 <body>
   <div>
-    <style scoped>
-      #sense-widget-sidenav a {
-        position: absolute !important;
-        right: -217px !important;
-        transition: 0.3s !important;
-        padding: 15px !important;
-        width: 232px !important;
-        text-decoration: none !important;
-        font-size: 20px !important;
-        color: white !important;
-        border-radius: 5px 0 0 5px !important;
-      }
-
-      .sense-widget-flex-container {
-        display: flex !important;
-        flex-direction: row !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      #sense-widget-sidenav a:hover {
-        right: 0 !important;
-      }
-
-      #sense-widget-placeholder {
-        padding-right: 50px !important;
-        margin: auto auto !important;
-      }
-
-      #sense-widget-content-body {
-        height: 112px !important;
-        font-size: 12px !important;
-        text-align: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      #sense-widget-drawer {
-        text-align: center !important;
-        top: 80px !important;
-        background-color: #464CE4 !important;
-      }
-
-      #sense-widget-sidenav {
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      #sense-widget-title {
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      .sense-widget-rate {
-        float: left !important;
-        height: 46px !important;
-        padding: 0 10px !important;
-      }
-
-      .sense-widget-rate:not(:checked)>input {
-        position: absolute !important;
-        top: -9999px !important;
-      }
-
-      .sense-widget-rate:not(:checked)>label {
-        float: right !important;
-        width: 1em !important;
-        overflow: hidden !important;
-        white-space: nowrap !important;
-        cursor: pointer !important;
-        font-size: 30px !important;
-        color: #ccc !important;
-      }
-
-      .sense-widget-rate:not(:checked)>label:before {
-        content: '★ ' !important;
-      }
-
-      .sense-widget-rate>input:checked~label {
-        color: #ffc700 !important;
-      }
-
-      .sense-widget-rate:not(:checked)>label:hover,
-      .sense-widget-rate:not(:checked)>label:hover~label {
-        color: #deb217 !important;
-      }
-
-      .sense-widget-rate>input:checked+label:hover,
-      .sense-widget-rate>input:checked+label:hover~label,
-      .sense-widget-rate>input:checked~label:hover,
-      .sense-widget-rate>input:checked~label:hover~label,
-      .sense-widget-rate>label:hover~input:checked~label {
-        color: #c59b08 !important;
-      }
-
-      .sense-widget-button {
-        background-color: #4CAF50 !important;
-        /* Green */
-        border: none !important;
-        color: white !important;
-        border-radius: 5px !important;
-        padding: 6px 15px !important;
-        text-align: center !important;
-        text-decoration: none !important;
-        display: inline-block !important;
-        font-size: 12px !important;
-        margin: 4px 2px !important;
-        -webkit-transition-duration: 0.4s !important;
-        /* Safari */
-        transition-duration: 0.4s !important;
-        cursor: pointer !important;
-      }
-
-      .sense-widget-button2 {
-        margin: 0 !important;
-        background-color: white !important;
-        color: #464ce4 !important;
-        border: 2px solid #ffffff !important;
-      }
-
-      .sense-widget-button2:hover {
-        margin: 0 !important;
-        background-color: #464ce4 !important;
-        color: white !important;
-      }
-
-      .sense-widget-footer {
-        font-size: 10px !important;
-        color: #ccc !important;
-        padding-top: 5px !important;
-      }
-    </style>
-    <div>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      <div id="sense-widget-sidenav">
-          Unde laborum explicabo, accusantium repellat, ad tenetur impedit distinctio officia magni, quia dignissimos illum at nostrum accusamus nesciunt minima sunt vitae quidem.
-      <a href="#" id="sense-widget-drawer">
-        <div class="sense-widget-flex-container">
-          <div id="sense-widget-placeholder">
-            < </div> <div id="sense-widget-content-body">
-              <h3 id="sense-widget-title">How would you rate us ?</h3>
-              <div class="sense-widget-rate">
-                <input type="radio" id="sense-widget-star5" name="rate" value="5" />
-                <label for="sense-widget-star5" title="text">5 stars</label>
-                <input type="radio" id="sense-widget-star4" name="rate" value="4" />
-                <label for="sense-widget-star4" title="text">4 stars</label>
-                <input type="radio" id="sense-widget-star3" name="rate" value="3" />
-                <label for="sense-widget-star3" title="text">3 stars</label>
-                <input type="radio" id="sense-widget-star2" name="rate" value="2" />
-                <label for="sense-widget-star2" title="text">2 stars</label>
-                <input type="radio" id="sense-widget-star1" name="rate" value="1" />
-                <label for="sense-widget-star1" title="text">1 star</label>
-              </div>
-              <button class="sense-widget-button sense-widget-button2" onclick="flagToggler()">Send</button>
-              <p class="sense-widget-footer">Powered by SenseWidget</p>
-          </div>
+    <div id="sense-widget-container" onscroll="scrolled(this)">
+      <div id="sense-widget-close" onclick="manualClose()">X</div>
+      <div id="sense-widget-title">Dummy Question Here</div>
+      <div id="sense-widget-rating-Rating" class="sense-widget-rating-star">
+        <input type="radio" id="sense-widget-rating-star5" name="rate" value="5" />
+        <label for="sense-widget-rating-star5" title="text">5 stars</label>
+        <input type="radio" id="sense-widget-rating-star4" name="rate" value="4" />
+        <label for="sense-widget-rating-star4" title="text">4 stars</label>
+        <input type="radio" id="sense-widget-rating-star3" name="rate" value="3" />
+        <label for="sense-widget-rating-star3" title="text">3 stars</label>
+        <input type="radio" id="sense-widget-rating-star2" name="rate" value="2" />
+        <label for="sense-widget-rating-star2" title="text">2 stars</label>
+        <input type="radio" id="sense-widget-rating-star1" name="rate" value="1" />
+        <label for="sense-widget-rating-star1" title="text">1 star</label>
+      </div>
+      <div id="sense-widget-submitted-state-wrapper">
+        <div class="dropdown">
+          <button id="sense-widget-dropbtn">Select Reason</button>
+          <div id="sense-widget-list" class="dropdown-content"></div>
         </div>
-      </a>
+        <textarea id="sense-widget-text-area" rows="3" placeholder="Want to say more? Please do!"></textarea>
+        <div id="sense-widget-submit-btn" class="sense-widget-submit-button sense-widget-submit-button2">Submit</div>
+      </div>
+      <div id="sense-widget-footer-logo-border">
+        <div id="sense-widget-footer-logo-box">
+          <span id="sense-widget-footer-text">
+            Powered by:
+          </span>
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/sense-widget-v1.appspot.com/o/Group%2087.png?alt=media&token=a33c5654-89bb-4189-afb1-98ccdc1bdbb7"
+            id="sense-widget-footer-logo" />
+        </div>
+      </div>
     </div>
-  </div>
+
   </div>
 </body>
 <script>
+
+  //manual close function
+  function manualClose() {
+    document.getElementById("sense-widget-container").setAttribute('style', "display:none !important")
+    setTimeout(function(){
+      document.getElementById("sense-widget-container").setAttribute('style', `
+      position: absolute !important;
+    height: 193px !important;
+    width: 337px !important;
+    -webkit-animation: mymoveright 1s !important;
+    animation: mymoveright 1s !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    word-wrap: break-word !important;
+    -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
+    -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
+    box-shadow: 3px 3px 4px 4px #ccc !important;
+    background: #fff !important;
+    color: #000 !important;
+    right: 0 !important;
+    top: 15vh !important;`)
+    },3000)
+  }
+
   window.localStorage.setItem('sessionKey', 'Testing key');
+
+  // Function which show widget on %scroll
   var _flagForScroller = false
   document.onscroll = function () {
     var pos = showPosition(document.body);
@@ -248,16 +343,20 @@
       pos = (elm.scrollTop || parent.scrollTop) / (parent.scrollHeight - parent.clientHeight) * 100;
     return pos;
   };
-  window.onscroll=function() {
-   var hT = document.getElementById("test").offsetTop,
-       hH = $('#scroll-to').outerHeight(),
-       wH = $(window).height(),
-       wS = $(this).scrollTop();
-    console.log((hT-wH) , wS);
-   if (wS > (hT+hH-wH)){
-    $('#scroll-to').fadeIn(3500);
-   }
-};
+
+
+
+  // Function which target specific id on scroll
+  window.onscroll = function () {
+    var hT = document.getElementById("scroll-to").offsetTop,
+      hH = document.getElementById("scroll-to").offsetHeight,
+      wH = document.documentElement.clientHeight,
+      wS = document.documentElement.scrollTop;
+    console.log((hT + hH - wH), wS);
+    if (wS > (hT + hH - wH)) {
+      alert('you have scrolled to the h1!');
+    }
+  };
 
 </script>
 
