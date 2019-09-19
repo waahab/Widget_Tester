@@ -261,9 +261,19 @@
 </style>
 
 <body>
+  <!-- <script src="https://firebasestorage.googleapis.com/v0/b/duaapp-fc129.appspot.com/o/app.js?alt=media&token=493828c2-77ec-4aae-a67a-543133f225fe"
+    widgetUrl="abc.com"
+    >
+    </script>
+  <div id='widget'>
+  </div> -->
+  <!-- <div id="widget">
+    <script src="" type="text/html"></script>
+
+  </div> -->
   <div>
     <div id="sense-widget-container" onscroll="scrolled(this)">
-      <div id="sense-widget-close" onclick="manualClose()">X</div>
+      <div id="sense-widget-close" onclick="manualClose(`Hours`,1)">X</div>
       <div id="sense-widget-title">Dummy Question Here</div>
       <div id="sense-widget-rating-Rating" class="sense-widget-rating-star">
         <input type="radio" id="sense-widget-rating-star5" name="rate" value="5" />
@@ -302,28 +312,70 @@
 <script>
 
   //manual close function
-  function manualClose() {
+  function manualClose(closeType, timeVal) {
+    let isSameUser = localStorage.getItem("widget_senseflow_creds")
+    if (isSameUser) {
+      let creds = JSON.parse(isSameUser)
+      console.log(creds, "if")
+      if (creds && creds.pushWidgetTime) {
+        let updatedTime = creds.pushWidgetTime - creds.timeofClose
+        console.log(updatedTime, "updatedTime")
+        let creds = {
+          timeofClose: Date.now(),
+          isUser: true,
+          pushWidgetTime: creds.pushWidgetTime
+        }
+        setTimeout(function () {
+          document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
+          localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+        }, updatedTime)
+      } else {
+
+      }
+    } else {
+      console.log(isSameUser, "else")
+      var timestamp;
+      var timeToPushWidget;
+      if (closeType == "Hours") {
+        timestamp = new Date(Date.now() + 60000 * timeVal).getTime(); // timestamp acc to the given value
+        timeToPushWidget = timeVal * 60000
+      }
+      else if (closeType == "Days") {
+        timestamp = new Date(Date.now() + 86400000 * timeVal).getTime(); // timestamp acc to the given value
+        timeToPushWidget = timeVal * 86400000
+      }
+      let creds = {
+        timeofClose: Date.now(),
+        isUser: true,
+        pushWidgetTime: timestamp
+      }
+      localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+      setTimeout(function () {
+        document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
+        localStorage.removeItem("widget_senseflow_creds")
+      }, timeToPushWidget)
+    }
     document.getElementById("sense-widget-container").setAttribute('style', "display:none !important")
-    setTimeout(function(){
-      document.getElementById("sense-widget-container").setAttribute('style', `
-      position: absolute !important;
-    height: 193px !important;
-    width: 337px !important;
-    -webkit-animation: mymoveright 1s !important;
-    animation: mymoveright 1s !important;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-    word-wrap: break-word !important;
-    -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
-    -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
-    box-shadow: 3px 3px 4px 4px #ccc !important;
-    background: #fff !important;
-    color: #000 !important;
-    right: 0 !important;
-    top: 15vh !important;`)
-    },3000)
+    // setTimeout(function(){
+    //   document.getElementById("sense-widget-container").setAttribute('style', `
+    //   position: absolute !important;
+    // height: 193px !important;
+    // width: 337px !important;
+    // -webkit-animation: mymoveright 1s !important;
+    // animation: mymoveright 1s !important;
+    // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+    // word-wrap: break-word !important;
+    // -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
+    // -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
+    // box-shadow: 3px 3px 4px 4px #ccc !important;
+    // background: #fff !important;
+    // color: #000 !important;
+    // right: 0 !important;
+    // top: 15vh !important;`)
+    // },3000)
   }
 
-  window.localStorage.setItem('sessionKey', 'Testing key');
+  // window.localStorage.setItem('sessionKey', 'Testing key');
 
   // Function which show widget on %scroll
   var _flagForScroller = false
