@@ -273,18 +273,44 @@
   </div> -->
   <div>
     <div id="sense-widget-container" onscroll="scrolled(this)">
-      <div id="sense-widget-close" onclick="manualClose(`Hours`,1)">X</div>
+      <script type="text/javascript">
+        function updatedTimer() {
+          console.log("Onload Called")
+          let checkUser = localStorage.getItem("widget_senseflow_creds")
+          if (checkUser) {
+            let creds = JSON.parse(checkUser)
+            console.log(creds, "if")
+            if (creds && creds.pushWidgetTime) {
+              document.getElementById("sense-widget-container").setAttribute('style', "display:none !important")
+              let updatedTime = creds.pushWidgetTime - Date.now()
+              console.log(updatedTime, "updatedTime")
+              creds.timeofClose = Date.now()
+              creds.isUser = true
+              creds.pushWidgetTime = creds.pushWidgetTime
+              localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+              setTimeout(function () {
+                document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
+                localStorage.removeItem("widget_senseflow_creds")
+              }, updatedTime)
+            } else {
+              document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
+            }
+          } else { console.log("else--->Running") }
+        }
+        updatedTimer();
+      </script>
+      <div id="sense-widget-close" onclick="manualClose(`Hours`,2)">X</div>
       <div id="sense-widget-title">Dummy Question Here</div>
       <div id="sense-widget-rating-Rating" class="sense-widget-rating-star">
-        <input type="radio" id="sense-widget-rating-star5" name="rate" value="5" />
+        <input type="radio" id="sense-widget-rating-star5" name="rate" value="5" onclick="_getstarRating(value)" />
         <label for="sense-widget-rating-star5" title="text">5 stars</label>
-        <input type="radio" id="sense-widget-rating-star4" name="rate" value="4" />
+        <input type="radio" id="sense-widget-rating-star4" name="rate" value="4" onclick="_getstarRating(value)" />
         <label for="sense-widget-rating-star4" title="text">4 stars</label>
-        <input type="radio" id="sense-widget-rating-star3" name="rate" value="3" />
+        <input type="radio" id="sense-widget-rating-star3" name="rate" value="3" onclick="_getstarRating(value)" />
         <label for="sense-widget-rating-star3" title="text">3 stars</label>
-        <input type="radio" id="sense-widget-rating-star2" name="rate" value="2" />
+        <input type="radio" id="sense-widget-rating-star2" name="rate" value="2" onclick="_getstarRating(value)" />
         <label for="sense-widget-rating-star2" title="text">2 stars</label>
-        <input type="radio" id="sense-widget-rating-star1" name="rate" value="1" />
+        <input type="radio" id="sense-widget-rating-star1" name="rate" value="1" onclick="_getstarRating(value)" />
         <label for="sense-widget-rating-star1" title="text">1 star</label>
       </div>
       <div id="sense-widget-submitted-state-wrapper">
@@ -310,7 +336,23 @@
   </div>
 </body>
 <script>
-
+  let formData = {}
+  function _getstarRating(value) {
+    formData.rating = value;
+    document.getElementById(`sense-widget-container`).setAttribute('style', `
+        ${globalCssSubmitted.basic ? globalCssSubmitted.basic : ''}
+        ${globalCssSubmitted.position ? globalCssSubmitted.position : ''}
+        background-color: ${bgColor ? bgColor : "#fff"} !important;
+        color: ${textColor ? textColor : "#fff"} !important;
+        height: 370px !important;
+        top:5vh !important;
+      `)
+    document.getElementById(`sense-widget-submit-btn`).setAttribute('style', `display:inline-block  !important;`)
+    document.getElementById(`sense-widget-text-area`).setAttribute('style', `display:inline-block  !important;`)
+    document.getElementById(`sense-widget-submitted-state-wrapper`).setAttribute('style', `display: block  !important;`)
+    document.getElementById(`sense-widget-dropbtn`).setAttribute('style', `display:inline-block  !important;`)
+    console.log("formData---->", formData)
+  }
   //manual close function
   function manualClose(closeType, timeVal) {
     let isSameUser = localStorage.getItem("widget_senseflow_creds")
@@ -320,30 +362,30 @@
       if (creds && creds.pushWidgetTime) {
         let updatedTime = creds.pushWidgetTime - creds.timeofClose
         console.log(updatedTime, "updatedTime")
-        let creds = {
-          timeofClose: Date.now(),
-          isUser: true,
-          pushWidgetTime: creds.pushWidgetTime
-        }
+        creds.timeofClose = Date.now()
+        creds.isUser = true
+        creds.pushWidgetTime = creds.pushWidgetTime
+        localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
         setTimeout(function () {
           document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
-          localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+          localStorage.removeItem("widget_senseflow_creds")
         }, updatedTime)
       } else {
-
+        document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
       }
     } else {
       console.log(isSameUser, "else")
       var timestamp;
       var timeToPushWidget;
       if (closeType == "Hours") {
-        timestamp = new Date(Date.now() + 60000 * timeVal).getTime(); // timestamp acc to the given value
-        timeToPushWidget = timeVal * 60000
+        timestamp = new Date(Date.now() + 3600000 * timeVal).getTime(); // timestamp acc to the given hours
+        timeToPushWidget = timeVal * 3600000
       }
       else if (closeType == "Days") {
-        timestamp = new Date(Date.now() + 86400000 * timeVal).getTime(); // timestamp acc to the given value
+        timestamp = new Date(Date.now() + 86400000 * timeVal).getTime(); // timestamp acc to the given days
         timeToPushWidget = timeVal * 86400000
       }
+      console.log("Time to push widget --- >", timeToPushWidget)
       let creds = {
         timeofClose: Date.now(),
         isUser: true,
@@ -374,9 +416,6 @@
     // top: 15vh !important;`)
     // },3000)
   }
-
-  // window.localStorage.setItem('sessionKey', 'Testing key');
-
   // Function which show widget on %scroll
   var _flagForScroller = false
   document.onscroll = function () {
@@ -395,9 +434,6 @@
       pos = (elm.scrollTop || parent.scrollTop) / (parent.scrollHeight - parent.clientHeight) * 100;
     return pos;
   };
-
-
-
   // Function which target specific id on scroll
   window.onscroll = function () {
     var hT = document.getElementById("scroll-to").offsetTop,
