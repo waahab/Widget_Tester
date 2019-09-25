@@ -44,7 +44,7 @@ document.onscroll = function () {
   console.clear();
   console.log(Math.round(pos) + '%')
   if (pos > 40 && _flagForScroller == false) {
-    console.log("scroll working")
+    console.log("scroll workingddd")
   }
 };
 function flagToggler() {

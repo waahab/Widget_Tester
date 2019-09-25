@@ -10,20 +10,19 @@
 
 <style scoped>
   #sense-widget-container {
-    position: absolute !important;
-    height: 193px !important;
-    width: 337px !important;
-    -webkit-animation: mymoveright 1s !important;
-    animation: mymoveright 1s !important;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-    word-wrap: break-word !important;
-    -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
-    -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
-    box-shadow: 3px 3px 4px 4px #ccc !important;
+    display: block !important;
+      margin: auto ;
+      position: fixed ; 
+      width: 100% ; 
+      height: 100% ;
+      top: 0 ; 
+      left: 0 ;
+      right: 0 ;
+      bottom: 0 ;
+      z-index: 2 ; 
+      cursor: pointer ;
     background: #fff !important;
     color: #000 !important;
-    right: 0 !important;
-    top: 15vh !important;
   }
 
   /* Safari 4.0 - 8.0 */
@@ -319,7 +318,8 @@
           <div id="sense-widget-list" class="dropdown-content"></div>
         </div>
         <textarea id="sense-widget-text-area" rows="3" placeholder="Want to say more? Please do!"></textarea>
-        <div id="sense-widget-submit-btn" class="sense-widget-submit-button sense-widget-submit-button2">Submit</div>
+        <div id="sense-widget-submit-btn" onclick="onSubmit()"
+          class="sense-widget-submit-button sense-widget-submit-button2">Submit</div>
       </div>
       <div id="sense-widget-footer-logo-border">
         <div id="sense-widget-footer-logo-box">
@@ -332,20 +332,247 @@
         </div>
       </div>
     </div>
-
+    <div>Scroll on me Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis
+      doloremque
+      rerum repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut
+      facere
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      inventore ad. ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus, sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere
+      inventore
+      ad.ipsum dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum
+      repellendus,
+      sed similique quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore
+      ad.ipsum
+      dolor sit amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed
+      similique
+      quibusdam aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit
+      amet consectetur adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique
+      quibusdam
+      aliquam itaque, repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet
+      consectetur
+      adipisicing elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam
+      itaque,
+      repellat corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur
+      adipisicing
+      elit. Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque,
+      repellat
+      corrupti velit praesentium? Eius facilis ut facere inventore ad.ipsum dolor sit amet consectetur adipisicing elit.
+      Nemo inventore fuga perspiciatis doloremque rerum repellendus, sed similique quibusdam aliquam itaque, repellat
+      corrupti
+      velit praesentium? Eius facilis ut facere inventore ad.
+    </div>
   </div>
 </body>
 <script>
+
+
   let formData = {}
+  function onSubmit() {
+    console.log("FormData********", formData)
+  }
   function _getstarRating(value) {
     formData.rating = value;
     document.getElementById(`sense-widget-container`).setAttribute('style', `
-        ${globalCssSubmitted.basic ? globalCssSubmitted.basic : ''}
-        ${globalCssSubmitted.position ? globalCssSubmitted.position : ''}
-        background-color: ${bgColor ? bgColor : "#fff"} !important;
-        color: ${textColor ? textColor : "#fff"} !important;
+    word-wrap: break-word!important;
+    -moz-box-shadow: 3px 3px 4px 4px #ccc!important;
+    -webkit-box-shadow: 3px 3px 4px 4px #ccc!important;
+    box-shadow: 3px 3px 4px 4px #ccc!important;
+     position: absolute!important;
+      max-width: 337px !important;
+      -webkit-animation: mymoveright 1s !important;
+      animation: mymoveright 1s !important;
+      max-width: 337px !important;
+      height: 193px !important;
+      width: 337px !important;"
+"right: 0 !important;
+      top: 15vh !important;"
+        background-color: ${"#fff"} !important;
+        color: ${"#fff"} !important;
         height: 370px !important;
-        top:5vh !important;
       `)
     document.getElementById(`sense-widget-submit-btn`).setAttribute('style', `display:inline-block  !important;`)
     document.getElementById(`sense-widget-text-area`).setAttribute('style', `display:inline-block  !important;`)
@@ -422,9 +649,24 @@
     var pos = showPosition(document.body);
     console.log(Math.round(pos) + '%')
     if (pos > 40 && _flagForScroller == false) {
-      alert("scroll working")
-      // _flagForScroller = true
+      // alert("scroll working")
+      _flagForScroller = true
+      document.getElementById('sense-widget-container').setAttribute(`style`, `display: block !important;
+      margin: auto ;
+      position: fixed ; 
+      width: 100% ; 
+      height: 100% ;
+      top: 0 ; 
+      left: 0 ;
+      right: 0 ;
+      bottom: 0 ;
+      z-index: 2 ; 
+      cursor: pointer ;
+    background: #fff !important;
+    color: #000 !important;`
+    )
     }
+    // alert('asdasd')
   };
   function flagToggler() {
     _flagForScroller = true
@@ -435,16 +677,16 @@
     return pos;
   };
   // Function which target specific id on scroll
-  window.onscroll = function () {
-    var hT = document.getElementById("scroll-to").offsetTop,
-      hH = document.getElementById("scroll-to").offsetHeight,
-      wH = document.documentElement.clientHeight,
-      wS = document.documentElement.scrollTop;
-    console.log((hT + hH - wH), wS);
-    if (wS > (hT + hH - wH)) {
-      alert('you have scrolled to the h1!');
-    }
-  };
+  // window.onscroll = function () {
+  //   var hT = document.getElementById("scroll-to").offsetTop,
+  //     hH = document.getElementById("scroll-to").offsetHeight,
+  //     wH = document.documentElement.clientHeight,
+  //     wS = document.documentElement.scrollTop;
+  //   console.log((hT + hH - wH), wS);
+  //   if (wS > (hT + hH - wH)) {
+  //     alert('you have scrolled to the h1!');
+  //   }
+  // };
 
 </script>
 
