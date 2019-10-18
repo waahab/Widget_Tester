@@ -272,8 +272,7 @@
   </div> -->
   <div>
     <div id="sense-widget-container">
-      <!-- onscroll="scrolled(this)" upper line -->
-      <!-- <script type="text/javascript">
+      <script type="text/javascript">
         function loadWidget(timer) {
           document.getElementById("sense-widget-container").setAttribute(`style`,
             `display:none !important;`)
@@ -303,11 +302,11 @@
             } else {
               document.getElementById("sense-widget-container").setAttribute('style', "display:block !important")
             }
-           } else { console.log("elseRunning") }  -->
-      <!-- } -->
-      <!-- // updatedTimer(); -->
-      <!-- //   loadWidget(10000);
-      // </script> -->
+          } else { console.log("elseRunning") }
+        }
+        updatedTimer();
+        loadWidget(10000);
+      </script>
       <div id="sense-widget-close" onclick="manualClose(`Hours`,2)">X</div>
       <div id="sense-widget-title">Dummy Question Here</div>
       <div id="sense-widget-rating-Rating" class="sense-widget-rating-star">
@@ -574,8 +573,6 @@
     } else if (isSameUser && JSON.stringify(isSameUser).repeatWidget === "Never") {
       document.getElementById("sense-widget-container").setAttribute("style", "display:none !important")
     }
-
-
   }
   function _getstarRating(value) {
     formData.rating = value;
@@ -590,9 +587,9 @@
       animation: mymoveright 1s !important;
       max-width: 337px !important;
       height: 193px !important;
-      width: 337px !important;"
-"right: 0 !important;
-      top: 15vh !important;"
+      width: 337px !important;
+right: 0 !important;
+      top: 15vh !important;
         background-color: ${"#fff"} !important;
         color: ${"#fff"} !important;
         height: 370px !important;
