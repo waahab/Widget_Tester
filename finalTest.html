@@ -8,321 +8,298 @@
   <title>Final Test</title>
 </head>
 <style>
- #sense-widget-footer-text{
-              vertical-align: middle !important;
-              font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
-              font-size: 14px !important;
-              color:#ffffff !important;
-            }
-            #sense-widget-footer-logo {
-              vertical-align: middle !important;
-              height: 24px !important;
-              width: 60px !important;
-              margin-left: 10px !important;
-          }
-            #sense-widget-footer-logo-box{
-              color: #aaafc0 !important;
-              text-align: right !important;
-              padding-top: 12px !important;
-              position: absolute !important;
-              right: 0 !important;
-            }
-            #sense-widget-footer-logo-border{
-              width: 272px !important;
-              position: relative !important;
-              top: 04px !important;
-              border-top: #c3cde4 solid 1px !important;
-              display: block !important;
-              margin: 0 auto !important;
-            }
-            #sense-widget-submit-btn{display: inline-block !important;}
-            #sense-widget-text-area{
-              font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
-              background-color: #ffffff !important;
-              color: #939393 !important;
-              padding: 6px !important;
-              border: 1px solid #c3cde4 !important;
-              border-radius: 5px !important;
-              width: 230px !important;
-              max-width: 230px !important;
-              height: 80px !important;
-              margin: 0px auto !important;
-              max-height: 80px !important;
-              font-size: 12px !important;
-              display: none;
-            }
-            #sense-widget-submitted-state-wrapper{
-              width: 230px !important;
-              max-width: 230px !important;
-              display: none !important;
-              font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
-              font-size: 22px !important;
-              margin: 0px auto !important;
-              padding: 10px 0px 0px 0px !important;
-              display: block !important;
-            }
-            #sense-widget-thanks-message{display: block !important;}
-            #sense-widget-title{
-              font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-              "Lucida Sans", Arial, sans-serif !important;
-            font-size: 22px !important;
-            margin: 0px !important;
-            padding: 5px !important;
-            display: block !important;
-            text-align: center !important;
-            color:#ffffff !important;
-            }
-            #sense-widget-close{font-family: Geneva, Tahoma, sans-serif !important; font-size: 15px !important; color: rgb(53, 53, 53) !important; text-align: right !important; padding: 15px 15px 0px 0px !important; margin: 0px !important;}
-            #sense-widget-container{word-wrap: break-word!important;
-    -moz-box-shadow: 3px 3px 4px 4px #ccc!important;
-    -webkit-box-shadow: 3px 3px 4px 4px #ccc!important;
-    box-shadow: 3px 3px 4px 4px #ccc!important;
-     position: absolute!important;
-      max-width: 337px !important;
-      -webkit-animation: mymoveright 1s !important;
-      animation: mymoveright 1s !important;
-      max-width: 337px !important;
-      height: 193px !important;
-      width: 337px !important;
-    background-color:#000000 !important;
-    color:#ffffff !important;
-    top: 16vh !important;
+  input[type="radio"] {
+    -webkit-appearance: none !important;
+    width: 14px !important;
+    height: 14px !important;
+    position: absolute !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: border 0.2s ease !important;
+    margin: 0 5px !important;
+    filter: invert(48%) sepia(81%) saturate(2476%) hue-rotate(-508deg) brightness(118%) contrast(30%) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  input[type="radio"]:focus {
+    outline: 0 !important;
+  }
+
+  #sense-widget-footer-text {
+    vertical-align: middle !important;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+  }
+
+  #sense-widget-footer-logo {
+    vertical-align: middle !important;
+    height: 24px !important;
+    width: 60px !important;
+    margin-left: 10px !important;
+  }
+
+  #sense-widget-footer-logo-box {
+    color: #aaafc0 !important;
+    text-align: right !important;
+    padding-top: 12px !important;
+    position: absolute !important;
+    right: 0 !important;
+  }
+
+  #sense-widget-footer-logo-border {
+    width: 272px !important;
+    position: relative !important;
+    top: 04px !important;
+    border-top: #c3cde4 solid 1px !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  #sense-widget-submit-btn {
+    display: inline-block !important;
+  }
+
+  #sense-widget-text-area {
+    font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
+    background-color: #ffffff !important;
+    color: #939393 !important;
+    padding: 6px !important;
+    border: 1px solid #c3cde4 !important;
+    border-radius: 5px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    height: 80px !important;
+    margin: 0px auto !important;
+    max-height: 80px !important;
+    font-size: 12px !important;
+    display: none;
+  }
+
+  #sense-widget-submitted-state-wrapper {
+    width: 230px !important;
+    max-width: 230px !important;
+    display: none !important;
+    font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
+    font-size: 22px !important;
+    margin: 0px auto !important;
+    padding: 10px 0px 0px 0px !important;
+  }
+
+  #sense-widget-thanks-message {
+    display: block !important;
+  }
+
+  #sense-widget-title {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif !important;
+    font-size: 22px !important;
+    margin: 0px !important;
+    padding: 5px !important;
+    display: block !important;
+    text-align: center !important;
+    color: #ffffff !important;
+  }
+
+  #sense-widget-close {
+    font-family: Geneva, Tahoma, sans-serif !important;
+    font-size: 15px !important;
+    color: rgb(53, 53, 53) !important;
+    text-align: right !important;
+    padding: 15px 15px 0px 0px !important;
+    margin: 0px !important;
+  }
+
+  #sense-widget-container {
+    word-wrap: break-word !important;
+    -moz-box-shadow: 3px 3px 4px 4px #ccc !important;
+    -webkit-box-shadow: 3px 3px 4px 4px #ccc !important;
+    box-shadow: 3px 3px 4px 4px #ccc !important;
+    position: absolute !important;
+    max-width: 337px !important;
+    -webkit-animation: mymoveright 1s !important;
+    animation: mymoveright 1s !important;
+    max-width: 337px !important;
+    width: 337px !important;
+    background-color: #4a4a4a !important;
+    color: #ffffff !important;
+
     left: 0 !important;
+    height: 193px !important;
+  }
+
+  #sense-widget-dropdown {
+    position: relative !important;
+    display: none !important;
+    margin: 0px 0px 11px 0px !important;
+  }
+
+  .sense-widget-dropdown-content {
+    border-radius: 3px !important;
+    display: none !important;
+    position: absolute !important;
+    background-color: #fff !important;
+    max-width: 230px !important;
+    width: 230px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
+    z-index: 1 !important;
+  }
+
+  .sense-widget-dropdown-content a {
+    color: #000000a6 !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    display: block !important;
+    word-break: break-word !important;
+    font-size: 12px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    overflow-y: auto !important;
+  }
+
+  .sense-widget-dropdown-content a:hover {
+    width: 198px !important;
+    background-color: #f1f1f1 !important;
+  }
+
+  #sense-widget-dropdown:hover .sense-widget-dropdown-content {
+    display: none !important;
+  }
+
+  #sense-widget-dropdown:hover #sense-widget-dropbtn {
+    color: #d7d8d7 !important;
+  }
+
+  #sense-widget-dropdown-placeholder {
+    position: absolute !important;
+    left: 20px !important;
+    bottom: 13px !important;
+  }
+
+  #sense-widget-dropdown-arrow {
+    position: absolute !important;
+    right: 20px !important;
+    bottom: 13px !important;
+  }
+
+  .sense-widget-listItem {
+    word-wrap: break-word !important;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif !important;
+    text-align: left !important;
+    font-size: 18px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+  }
+
+  #sense-widget-dropbtn {
+    font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
+    background-color: #ffffff !important;
+    color: #939393 !important;
+    padding: 0 !important;
+    border: 1px solid #c3cde4 !important;
+    border-radius: 5px !important;
+    width: 230px !important;
+    max-width: 230px !important;
+    height: 32px !important;
+    margin: 0px !important;
+    max-height: 32px !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    display: none;
+  }
+
+  .sense-widget-submit-button {
+    font-size: 10px !important;
+    /* Green */
+    float: right !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    padding: 6px 15px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+    margin: 4px 2px !important;
+    -webkit-transition-duration: 0.4s !important;
+    /* Safari */
+    transition-duration: 0.4s !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    display: none !important;
+  }
+
+  .sense-widget-submit-button2 {
+    font-size: 10px !important;
+    background-color: #464ce4 !important;
+    color: #fff !important;
+    padding: 6px 15px !important;
+    width: 100px !important;
+    max-width: 100px !important;
+    display: none !important;
+  }
+
+  @-webkit-keyframes mymoveright {
+    from {
+      right: -200px;
     }
-            .sense-widget-dropdown {
-              position: relative !important;
-              display: inline-block !important;
-              margin: 0px 0px 11px 0px !important;
-            }
-            .sense-widget-dropdown-content {
-              border-radius: 3px !important;
-              display: none !important;
-              position: absolute !important;
-              background-color: #fff !important;
-              max-width: 230px !important;
-              width: 230px !important;
-              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
-              z-index: 1 !important;
-            }
-            .sense-widget-dropdown-content a {
-              color: #000000a6 !important;
-              padding: 12px 16px !important;
-              text-decoration: none !important;
-              display: block !important;
-              word-break: break-word !important;
-              font-size: 12px !important;
-              width: 230px !important;
-              max-width: 230px !important;
-              overflow-y: auto !important;
-            }
-            .sense-widget-dropdown-content a:hover {
-              width: 198px !important;
-              background-color: #f1f1f1 !important;
-            }
-            .sense-widget-dropdown:hover .sense-widget-dropdown-content {
-              display: block !important;
-            }
-            .sense-widget-dropdown:hover #sense-widget-dropbtn {
-              color: #d7d8d7 !important;
-            }
-          #sense-widget-dropdown-placeholder {
-              position: absolute !important;
-              left: 20px !important;
-              bottom: 13px !important;
-          }
-          #sense-widget-dropdown-arrow {
-              position: absolute !important;
-              right: 20px !important;
-              bottom: 13px !important;
-          }
-          .sense-widget-listItem {
-            word-wrap: break-word !important;
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-              "Lucida Sans", Arial, sans-serif !important;
-            text-align: left !important;
-            font-size: 18px !important;
-            margin: 0 !important;
-            padding: 10px !important;
-          }
-            #sense-widget-dropbtn {
-              font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
-              background-color: #ffffff !important;
-              color: #939393 !important;
-              padding: 0 !important;
-              border: 1px solid #c3cde4 !important;
-              border-radius: 5px !important;
-              width: 230px !important;
-              max-width: 230px !important;
-              height: 32px !important;
-              margin: 0px !important;
-              max-height: 32px !important;
-              cursor: pointer !important;
-              font-size: 12px !important;
-              display: none;
-            }
-            .sense-widget-submit-button {
-              font-size: 10px !important;
-              /* Green */
-              float: right !important;
-              border: none !important;
-              color: #fff !important;
-              border-radius: 5px !important;
-              padding: 6px 15px !important;
-              text-align: center !important;
-              text-decoration: none !important;
-              font-size: 12px !important;
-              width: 100px !important;
-              max-width: 100px !important;
-              margin: 4px 2px !important;
-              -webkit-transition-duration: 0.4s !important;
-              /* Safari */
-              transition-duration: 0.4s !important;
-              cursor: pointer !important;
-              margin: 0 !important;
-              display: none !important;
-            }
-            .sense-widget-submit-button2 {
-              font-size: 10px !important;
-              background-color: #464ce4 !important;
-              color: #fff !important;
-              padding: 6px 15px !important;
-              width: 100px !important;
-              max-width: 100px !important;
-              display: none !important;
-            }
-            @-webkit-keyframes mymoveright {from {right:-200px;}to{right: 0px;}}
-            @keyframes mymoveright {from {right:-200px;}to{right: 0px;}}
-            @-webkit-keyframes mymoveleft {from {left:-200px;}to{left: 0px;}}
-            @keyframes mymoveleft {from {left:-200px;}to{left: 0px;}}
-            @-webkit-keyframes mymoveup {from {bottom:-200px;}to{bottom: 0px;}}
-            @keyframes mymoveup {from {bottom:-200px;}to{bottom: 0px;}}
-          .swr-rating-toggle{
+
+    to {
+      right: 0px;
+    }
+  }
+
+  @keyframes mymoveright {
+    from {
+      right: -200px;
+    }
+
+    to {
+      right: 0px;
+    }
+  }
+
+  @-webkit-keyframes mymoveleft {
+    from {
+      left: -200px;
+    }
+
+    to {
+      left: 0px;
+    }
+  }
+
+  @keyframes mymoveleft {
+    from {
+      left: -200px;
+    }
+
+    to {
+      left: 0px;
+    }
+  }
+
+
+  .swr-rating-toggle {
     margin: 0 2px !important;
     cursor: pointer !important;
   }
-    #senseWidgetRatingFeedy {
+
+  #senseWidgetRatingFeedy {
     height: 60px !important;
     padding: 0 10px !important;
     margin-top: 13px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 0px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
-    display: block  !important;
+    display: block !important;
     text-align: center !important;
   }
 </style>
 
 <body>
-    <div id="sense-widget-container">
-        <div id="sense-widget-close">X</div>
-        <div id="sense-widget-title">asdasd</div>
-        <div id="sense-widget-thanks-message"></div>
-       <form id="senseWidgetRatingFeedy">
-        <input style="position: absolute " type="radio" id="swr-rating-toggle-1" value="1" 
-        onclick="feedyFeedback('more', '0', '#ed1c24')"
-        />
-        <label for="swr-rating-toggle-1">
-          <svg
-            class="swr-rating-toggle"
-            width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.81 138.81">
-            <g id="Layer_2" data-name="Layer 2">
-              <g id="Layer_1-2" data-name="Layer 1">
-                <circle id="swr-id-0-3" style="fill: #fff" cx="68" cy="68.16" r="67.98" width="135.978 px" height="135.978 px" />
-                <g id="Group_80" data-name="Group 80"><g id="Group_79" data-name="Group 79">
-                  <path id="Path_105" data-name="Path 105" class="swr-id-0-2" style="fill: #ed1c24" d="M69.41,137.78A68.38,68.38,0,1,1,137.78,69.4h0A68.45,68.45,0,0,1,69.41,137.78Zm0-125.57a57.2,57.2,0,1,0,57.19,57.2h0A57.26,57.26,0,0,0,69.41,12.21Z" />
-                </g>
-                  <path id="Path_106" data-name="Path 106" class="swr-id-0-2" style="fill: #ed1c24" d="M79.31,50.4c0,6.21,3.12,11.25,7,11.25s7-5,7-11.25-3.13-11.25-7-11.25S79.31,44.19,79.31,50.4Z" />
-                  <path id="Path_107" data-name="Path 107" class="swr-id-0-2" style="fill: #ed1c24" d="M44.76,50.14c0,6.21,3.13,11.25,7,11.25s7-5,7-11.25-3.12-11.26-7-11.26S44.76,43.92,44.76,50.14Z" />
-                  <path id="Path_108" data-name="Path 108" class="swr-id-0-2" style="fill: #ed1c24" d="M39.56,99.67a28.81,28.81,0,0,1,28-20.54c14.55-.76,27.92,6,32,20.53a4.19,4.19,0,0,0,8.08-2.23c-5-17.71-20.38-26.36-38.11-26.71A37.6,37.6,0,0,0,31.46,97.43c-1.77,5.13,6.33,7.31,8.08,2.23Z" />
-                </g></g></g></svg>
-        </label>
-        <input style="position: absolute " type="radio" id="swr-rating-toggle-2" value="2" 
-        onclick="feedyFeedback('more', '1', '#f7901e')"
-        />
-        <label for="swr-rating-toggle-2">
-          <svg
-            class="swr-rating-toggle"
-            width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.39 138.81">
-            <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
-              <circle id="swr-id-1-3" style="fill: #fff" cx="68" cy="68.16" r="67.98" width="135.978 px" height="135.978 px" />
-              <g id="Group_72" data-name="Group 72">
-                <g id="Group_71" data-name="Group 71">
-                  <path id="Path_89" data-name="Path 89" class="swr-id-1-2" style="fill: #f7901e" d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" /></g>
-                <path id="Path_90" data-name="Path 90" class="swr-id-1-2" style="fill: #f7901e" d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
-                <path id="Path_91" data-name="Path 91" class="swr-id-1-2" style="fill: #f7901e" d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
-                <path id="Path_92" data-name="Path 92" class="swr-id-1-2" style="fill: #f7901e" d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
-              </g></g></g></svg>
-        </label>
-        <input style="position: absolute " type="radio" id="swr-rating-toggle-3" value="3" 
-        onclick="feedyFeedback('more', '2', '#ffce07')"
-        />
-        <label for="swr-rating-toggle-3">
-          <svg
-            class="swr-rating-toggle"
-            width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.39 138.81">
-            <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
-              <circle id="swr-id-2-3" style="fill:#fff " cx="68" cy="68.16" r="67.98" width="135.978 px" height="135.978 px" />
-              <g id="Group_72" data-name="Group 72">
-                <g id="Group_71" data-name="Group 71">
-                  <path id="Path_89" data-name="Path 89" class="swr-id-2-2" style="fill: #ffce07" d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" /></g>
-                <path id="Path_90" data-name="Path 90" class="swr-id-2-2" style="fill: #ffce07" d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
-                <path id="Path_91" data-name="Path 91" class="swr-id-2-2" style="fill: #ffce07" d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
-                <path id="Path_92" data-name="Path 92" class="swr-id-2-2" style="fill: #ffce07" d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
-              </g></g></g></svg>
-        </label>
-        <input style="position: absolute " type="radio" id="swr-rating-toggle-4" value="4" 
-        onclick="feedyFeedback('more', '3', '#8ac640')"
-        />
-        <label for="swr-rating-toggle-4">
-          <svg
-            class="swr-rating-toggle"
-            width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.39 138.81">
-            <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
-              <circle id="swr-id-3-3" style="fill: #fff " cx="68" cy="68.16" r="67.98" width="135.978 px" height="135.978 px" />
-              <g id="Group_72" data-name="Group 72">
-                <g id="Group_71" data-name="Group 71">
-                  <path id="Path_89" data-name="Path 89" class="swr-id-3-2" style="fill: #8ac640" d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" /></g>
-                <path id="Path_90" data-name="Path 90" class="swr-id-3-2" style="fill: #8ac640" d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
-                <path id="Path_91" data-name="Path 91" class="swr-id-3-2" style="fill: #8ac640" d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
-                <path id="Path_92" data-name="Path 92" class="swr-id-3-2" style="fill: #8ac640" d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
-              </g></g></g></svg>
-        </label>
-        <input style="position: absolute " type="radio" id="swr-rating-toggle-5" value="5" 
-        onclick="feedyFeedback('more', '4', '#1db24b')"
-        />
-        <label for="swr-rating-toggle-5">
-          <svg
-            class="swr-rating-toggle"
-            width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.39 138.81">
-            <g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
-              <circle id="swr-id-4-3" style="fill: #fff " cx="68" cy="68.16" r="67.98" width="135.978 px" height="135.978 px" />
-              <g id="Group_72" data-name="Group 72">
-                <g id="Group_71" data-name="Group 71">
-                  <path id="Path_89" data-name="Path 89" class="swr-id-4-2" style="fill: #1db24b" d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" /></g>
-                <path id="Path_90" data-name="Path 90" class="swr-id-4-2" style="fill: #1db24b" d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
-                <path id="Path_91" data-name="Path 91" class="swr-id-4-2" style="fill: #1db24b" d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
-                <path id="Path_92" data-name="Path 92" class="swr-id-4-2" style="fill: #1db24b" d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
-              </g></g></g></svg>
-        </label>
-      </form >     
-        <div id="sense-widget-submitted-state-wrapper">
-          <div class="sense-widget-dropdown" >
-            <button id="sense-widget-dropbtn"><span id="sense-widget-dropdown-placeholder">Select Reason</span>  <span id="sense-widget-dropdown-arrow">▼</span> </button>
-            <div id="sense-widget-list" class="sense-widget-dropdown-content"><a class="sense-widget-listItem">as</a></div>
-          </div>
-          <textarea id="sense-widget-text-area" rows="3" placeholder="Want to say more? Please do!"></textarea>
-          <button id="sense-widget-submit-btn"
-            class="sense-widget-submit-button sense-widget-submit-button2">Submit</button>
-        </div>
-        <div id="sense-widget-footer-logo-border">
-          <div id="sense-widget-footer-logo-box">
-            <span id="sense-widget-footer-text">
-              Powered by:
-              </span>
-            <img alt="Rate Smiley Logo" src="https://firebasestorage.googleapis.com/v0/b/sense-widget-v1.appspot.com/o/Group%2087.png?alt=media&token=a33c5654-89bb-4189-afb1-98ccdc1bdbb7" id="sense-widget-footer-logo" />
-          </div>
-        </div>
-      </div>
   <script>
     function feedyFeedback(isMore, value, color) {
       var icons = document.querySelectorAll('.swr-rating-toggle')
@@ -346,6 +323,29 @@
           else if (index === 4) colorReset(index, "#1db24b");
         }
       })
+      if (isMore === "more") {
+        console.log("isMore called")
+        document.getElementById("sense-widget-container").setAttribute('style', `
+        ${globalCssS.backgroundColor}
+        `)
+        document.getElementById("sense-widget-title").setAttribute('style', 'display: none !important;');
+        document.getElementById("sense-widget-thanks-message").setAttribute('style', `display:block !important`)
+        document.getElementById("sense-widget-submitted-state-wrapper").setAttribute('style', `
+        width: 230px !important;
+        max-width: 230px !important;
+        font-family: "Trebuchet MS", "Helvetica", sans-serif !important;
+        font-size: 22px !important;
+        margin: 0px auto !important;
+        padding: 10px 0px 0px 0px !important;
+        display:block !important`)
+        document.getElementById("sense-widget-dropdown").setAttribute('style', `
+        display:inline-block !important;
+        position: relative !important;
+        margin: 0px 0px 11px 0px !important;
+        `)
+        document.getElementById("sense-widget-dropbtn").style.display = 'inline-block';
+        document.getElementById("sense-widget-submit-btn").style.display = 'inline-block';
+      }
     }
     function colorReset(index, color) {
       let path = document.getElementsByClassName(`swr-id-${index}-2`)
@@ -357,8 +357,276 @@
     }
 
     function ratingFeedback(isMore, value) {
-      console.log("Value", value, "isMore", isMore)
-    }</script>
+      console.log("Value---->", value, "isMore---->", isMore)
+      if (isMore === "more") {
+        console.log("isMore called")
+        document.getElementById("sense-widget-title").setAttribute('style', 'display: none !important;');
+        document.getElementById("sense-widget-thanks-message").setAttribute('style', 'display:block !important')
+        document.getElementById("sense-widget-submitted-state-wrapper").setAttribute('style', 'display:block !important')
+        document.getElementById("sense-widget-dropdown").setAttribute('style', 'display:inline-block !important')
+        document.getElementById("sense-widget-dropbtn").setAttribute('style', 'display:inline-block !important')
+        document.getElementById("sense-widget-submit-btn").setAttribute('style', 'display:inline-block !important')
+      }
+    }
+    function getRating() {
+      if (more === "more") {
+        console.log("isMore called")
+        document.getElementById("sense-widget-container").setAttribute('style',
+          `word-wrap: break-word!important;
+      -moz-box-shadow: 3px 3px 4px 4px #ccc!important;
+      -webkit-box-shadow: 3px 3px 4px 4px #ccc!important;
+      box-shadow: 3px 3px 4px 4px #ccc!important;position: absolute!important;
+    max-width: 337px !important;
+    -webkit-animation: mymoveright 1s !important;
+    animation: mymoveright 1s !important;
+    max-width: 337px !important;
+    width: 337px !important;
+background-color:#8b572a !important;
+color:#ffffff !important;
+top: 08vh !important;
+height: 322px !important;`
+        )
+        document.getElementById("sense-widget-title").setAttribute('style', 'display: none !important;');
+        document.getElementById("sense-widget-thanks-message").setAttribute('style', 'display:block !important')
+        document.getElementById("sense-widget-submitted-state-wrapper").setAttribute('style', `
+          width: 230px!important;
+        max - width: 230px!important;
+        font - family: "Trebuchet MS", "Helvetica", sans - serif!important;
+        font - size: 22px!important;
+        margin: 0px auto!important;
+        padding: 10px 0px 0px 0px!important;
+        display: block!important`)
+        document.getElementById("sense-widget-dropdown").setAttribute('style', `
+          display: inline - block!important;
+        position: relative!important;
+        margin: 0px 0px 11px 0px!important;
+        `)
+        document.getElementById("sense-widget-dropbtn").style.display = 'inline-block';
+        document.getElementById("sense-widget-submit-btn").style.display = 'inline-block';
+      }
+    }
+  </script>
+  <div id="sense-widget-container">
+    <script type="text/javascript">
+      function loadWidget(timer) {
+        document.getElementById("sense-widget-container").setAttribute('style', 'display:none !important;')
+        setTimeout(function () {
+          document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important;')
+        }, timer)
+      }
+      function updatedTimer() {
+        console.log("Onload Called")
+        let checkUser = localStorage.getItem("widget_senseflow_creds")
+        if (checkUser) {
+          let creds = JSON.parse(checkUser)
+          console.log(creds, "if")
+          if (creds && creds.pushWidgetTime) {
+            document.getElementById("sense-widget-container").setAttribute('style', 'display:none !important')
+            let updatedTime = creds.pushWidgetTime - Date.now()
+            console.log(updatedTime, "updatedTime")
+            creds.timeofClose = Date.now()
+            creds.isUser = true
+            creds.pushWidgetTime = creds.pushWidgetTime
+            localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+            setTimeout(function () {
+              document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important')
+              localStorage.removeItem("widget_senseflow_creds")
+            }, updatedTime)
+          } else {
+            document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important')
+          }
+        } else { console.log("elseRunning") }
+      }
+      updatedTimer();
+      loadWidget(10000);
+    </script>
+    <div id="sense-widget-container">
+      <script type="text/javascript">
+        function loadWidget(timer) {
+          document.getElementById("sense-widget-container").setAttribute('style', 'display:none !important;')
+          setTimeout(function () {
+            document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important;')
+          }, timer)
+        }
+        function updatedTimer() {
+          console.log("Onload Called")
+          let checkUser = localStorage.getItem("widget_senseflow_creds")
+          if (checkUser) {
+            let creds = JSON.parse(checkUser)
+            console.log(creds, "if")
+            if (creds && creds.pushWidgetTime) {
+              document.getElementById("sense-widget-container").setAttribute('style', 'display:none !important')
+              let updatedTime = creds.pushWidgetTime - Date.now()
+              console.log(updatedTime, "updatedTime")
+              creds.timeofClose = Date.now()
+              creds.isUser = true
+              creds.pushWidgetTime = creds.pushWidgetTime
+              localStorage.setItem("widget_senseflow_creds", JSON.stringify(creds))
+              setTimeout(function () {
+                document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important')
+                localStorage.removeItem("widget_senseflow_creds")
+              }, updatedTime)
+            } else {
+              document.getElementById("sense-widget-container").setAttribute('style', 'display:block !important')
+            }
+          } else { console.log("elseRunning") }
+        }
+        updatedTimer();
+        loadWidget(10000);
+      </script>
+      <div id="sense-widget-close">X</div>
+      <div id="sense-widget-title">jhgjhgjhgjhg</div>
+      <div id="sense-widget-thanks-message">asdasdasdasd</div>
+      <form id="senseWidgetRatingFeedy">
+        <input style="position: absolute " type="radio" id="swr-rating-toggle-1" value="1"
+          onclick="feedyFeedback('more', '0', '#ed1c24')" />
+        <label for="swr-rating-toggle-1">
+          <svg class="swr-rating-toggle" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 138.81 138.81">
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <circle id="swr-id-0-3" style="fill: #fff" cx="68" cy="68.16" r="67.98" width="135.978 px"
+                  height="135.978 px" />
+                <g id="Group_80" data-name="Group 80">
+                  <g id="Group_79" data-name="Group 79">
+                    <path id="Path_105" data-name="Path 105" class="swr-id-0-2" style="fill: #ed1c24"
+                      d="M69.41,137.78A68.38,68.38,0,1,1,137.78,69.4h0A68.45,68.45,0,0,1,69.41,137.78Zm0-125.57a57.2,57.2,0,1,0,57.19,57.2h0A57.26,57.26,0,0,0,69.41,12.21Z" />
+                  </g>
+                  <path id="Path_106" data-name="Path 106" class="swr-id-0-2" style="fill: #ed1c24"
+                    d="M79.31,50.4c0,6.21,3.12,11.25,7,11.25s7-5,7-11.25-3.13-11.25-7-11.25S79.31,44.19,79.31,50.4Z" />
+                  <path id="Path_107" data-name="Path 107" class="swr-id-0-2" style="fill: #ed1c24"
+                    d="M44.76,50.14c0,6.21,3.13,11.25,7,11.25s7-5,7-11.25-3.12-11.26-7-11.26S44.76,43.92,44.76,50.14Z" />
+                  <path id="Path_108" data-name="Path 108" class="swr-id-0-2" style="fill: #ed1c24"
+                    d="M39.56,99.67a28.81,28.81,0,0,1,28-20.54c14.55-.76,27.92,6,32,20.53a4.19,4.19,0,0,0,8.08-2.23c-5-17.71-20.38-26.36-38.11-26.71A37.6,37.6,0,0,0,31.46,97.43c-1.77,5.13,6.33,7.31,8.08,2.23Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <input style="position: absolute " type="radio" id="swr-rating-toggle-2" value="2"
+          onclick="feedyFeedback('more', '1', '#f7901e')" />
+        <label for="swr-rating-toggle-2">
+          <svg class="swr-rating-toggle" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 139.39 138.81">
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <circle id="swr-id-1-3" style="fill: #fff" cx="68" cy="68.16" r="67.98" width="135.978 px"
+                  height="135.978 px" />
+                <g id="Group_72" data-name="Group 72">
+                  <g id="Group_71" data-name="Group 71">
+                    <path id="Path_89" data-name="Path 89" class="swr-id-1-2" style="fill: #f7901e"
+                      d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" />
+                  </g>
+                  <path id="Path_90" data-name="Path 90" class="swr-id-1-2" style="fill: #f7901e"
+                    d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
+                  <path id="Path_91" data-name="Path 91" class="swr-id-1-2" style="fill: #f7901e"
+                    d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
+                  <path id="Path_92" data-name="Path 92" class="swr-id-1-2" style="fill: #f7901e"
+                    d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <input style="position: absolute " type="radio" id="swr-rating-toggle-3" value="3"
+          onclick="feedyFeedback('more', '2', '#ffce07')" />
+        <label for="swr-rating-toggle-3">
+          <svg class="swr-rating-toggle" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 139.39 138.81">
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <circle id="swr-id-2-3" style="fill:#fff " cx="68" cy="68.16" r="67.98" width="135.978 px"
+                  height="135.978 px" />
+                <g id="Group_72" data-name="Group 72">
+                  <g id="Group_71" data-name="Group 71">
+                    <path id="Path_89" data-name="Path 89" class="swr-id-2-2" style="fill: #ffce07"
+                      d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" />
+                  </g>
+                  <path id="Path_90" data-name="Path 90" class="swr-id-2-2" style="fill: #ffce07"
+                    d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
+                  <path id="Path_91" data-name="Path 91" class="swr-id-2-2" style="fill: #ffce07"
+                    d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
+                  <path id="Path_92" data-name="Path 92" class="swr-id-2-2" style="fill: #ffce07"
+                    d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <input style="position: absolute " type="radio" id="swr-rating-toggle-4" value="4"
+          onclick="feedyFeedback('more', '3', '#8ac640')" />
+        <label for="swr-rating-toggle-4">
+          <svg class="swr-rating-toggle" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 139.39 138.81">
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <circle id="swr-id-3-3" style="fill: #fff " cx="68" cy="68.16" r="67.98" width="135.978 px"
+                  height="135.978 px" />
+                <g id="Group_72" data-name="Group 72">
+                  <g id="Group_71" data-name="Group 71">
+                    <path id="Path_89" data-name="Path 89" class="swr-id-3-2" style="fill: #8ac640"
+                      d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" />
+                  </g>
+                  <path id="Path_90" data-name="Path 90" class="swr-id-3-2" style="fill: #8ac640"
+                    d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
+                  <path id="Path_91" data-name="Path 91" class="swr-id-3-2" style="fill: #8ac640"
+                    d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
+                  <path id="Path_92" data-name="Path 92" class="swr-id-3-2" style="fill: #8ac640"
+                    d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+        <input style="position: absolute " type="radio" id="swr-rating-toggle-5" value="5"
+          onclick="feedyFeedback('more', '4', '#1db24b')" />
+        <label for="swr-rating-toggle-5">
+          <svg class="swr-rating-toggle" width="50px" height="50px" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 139.39 138.81">
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <circle id="swr-id-4-3" style="fill: #fff " cx="68" cy="68.16" r="67.98" width="135.978 px"
+                  height="135.978 px" />
+                <g id="Group_72" data-name="Group 72">
+                  <g id="Group_71" data-name="Group 71">
+                    <path id="Path_89" data-name="Path 89" class="swr-id-4-2" style="fill: #1db24b"
+                      d="M69.15,137.11a68,68,0,1,1,68-68h0A68,68,0,0,1,69.15,137.11Zm0-124.83A56.87,56.87,0,1,0,126,69.15h0A56.92,56.92,0,0,0,69.15,12.28Z" />
+                  </g>
+                  <path id="Path_90" data-name="Path 90" class="swr-id-4-2" style="fill: #1db24b"
+                    d="M79.2,50.12c0,6.18,3.11,11.19,7,11.19s6.94-5,6.94-11.19S90,38.94,86.15,38.94,79.2,43.93,79.2,50.12Z" />
+                  <path id="Path_91" data-name="Path 91" class="swr-id-4-2" style="fill: #1db24b"
+                    d="M44.86,49.85C44.86,56,48,61,51.8,61s7-5,7-11.18-3.11-11.19-6.95-11.19S44.86,43.67,44.86,49.85Z" />
+                  <path id="Path_92" data-name="Path 92" class="swr-id-4-2" style="fill: #1db24b"
+                    d="M34.7,97.93a42.63,42.63,0,0,1,30.73-14,45,45,0,0,1,35.43,14c3.78,3.83,9.67-2.06,5.89-5.89a54.38,54.38,0,0,0-76.91-1c-.35.34-.69.68-1,1-3.75,3.86,2.15,9.75,5.9,5.89Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </label>
+      </form>
+      <div id="sense-widget-submitted-state-wrapper">
+        <div id="sense-widget-dropdown">
+          <button id="sense-widget-dropbtn"><span id="sense-widget-dropdown-placeholder">Select Reason</span> <span
+              id="sense-widget-dropdown-arrow">▼</span> </button>
+          <div id="sense-widget-list" class="sense-widget-dropdown-content"><a class="sense-widget-listItem">hjkhjk</a>
+          </div>
+        </div>
+        <textarea id="sense-widget-text-area" rows="3" placeholder="Want to say more? Please do!"></textarea>
+        <button id="sense-widget-submit-btn" onclick="getRating()"
+          class="sense-widget-submit-button sense-widget-submit-button2">Submit</button>
+      </div>
+      <div id="sense-widget-footer-logo-border">
+        <div id="sense-widget-footer-logo-box">
+          <span id="sense-widget-footer-text">
+            Powered by:
+          </span>
+          <img alt="Rate Smiley Logo"
+            src="https://firebasestorage.googleapis.com/v0/b/sense-widget-v1.appspot.com/o/Group%2087.png?alt=media&token=a33c5654-89bb-4189-afb1-98ccdc1bdbb7"
+            id="sense-widget-footer-logo" />
+        </div>
+      </div>
+    </div>
+
 </body>
 
 </html>
