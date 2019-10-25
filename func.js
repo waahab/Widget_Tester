@@ -15,3 +15,5 @@ function showPosition(elm) {
     pos = (elm.scrollTop || parent.scrollTop) / (parent.scrollHeight - parent.clientHeight) * 100;
   return pos;
 };
+let url = 'senseWidget/'+domain_id+'/'+values[0].id
+let url = 'senseWidget/'+domain_id+'/'+uid+'/'+values[0].id;
